@@ -27,7 +27,13 @@ class SliderInsideTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "id", for: indexPath) as! TableCell
+        cell.sliderInsideTableView = self
         return cell
+    }
+    
+    
+    func push(){
+        self.navigationController?.popViewController(animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,6 +46,9 @@ class SliderInsideTableView: UITableViewController {
 
 
 class TableCell:UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    
+    
+    var sliderInsideTableView:SliderInsideTableView?
     
     lazy var collectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -72,6 +81,11 @@ class TableCell:UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.frame.width, height: self.frame.height)
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.sliderInsideTableView?.push()
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
