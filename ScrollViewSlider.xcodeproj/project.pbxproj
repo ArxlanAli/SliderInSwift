@@ -14,6 +14,7 @@
 		F5CA4BE8204C6D0500E13774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CA4BE6204C6D0500E13774 /* LaunchScreen.storyboard */; };
 		F5CA4BF3204C6D0500E13774 /* ScrollViewSliderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CA4BF2204C6D0500E13774 /* ScrollViewSliderTests.swift */; };
 		F5CA4BFE204C6D0500E13774 /* ScrollViewSliderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CA4BFD204C6D0500E13774 /* ScrollViewSliderUITests.swift */; };
+		F5E0B0C4204D0B70008AFC6D /* SliderInsideTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E0B0C3204D0B70008AFC6D /* SliderInsideTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F5CA4BF9204C6D0500E13774 /* ScrollViewSliderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewSliderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CA4BFD204C6D0500E13774 /* ScrollViewSliderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewSliderUITests.swift; sourceTree = "<group>"; };
 		F5CA4BFF204C6D0500E13774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E0B0C3204D0B70008AFC6D /* SliderInsideTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderInsideTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				F5CA4BDF204C6D0500E13774 /* ViewController.swift */,
 				F5CA4BE1204C6D0500E13774 /* Main.storyboard */,
 				F5CA4BE4204C6D0500E13774 /* Assets.xcassets */,
+				F5E0B0C3204D0B70008AFC6D /* SliderInsideTableView.swift */,
 				F5CA4BE6204C6D0500E13774 /* LaunchScreen.storyboard */,
 				F5CA4BE9204C6D0500E13774 /* Info.plist */,
 			);
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E0B0C4204D0B70008AFC6D /* SliderInsideTableView.swift in Sources */,
 				F5CA4BE0204C6D0500E13774 /* ViewController.swift in Sources */,
 				F5CA4BDE204C6D0500E13774 /* AppDelegate.swift in Sources */,
 			);

@@ -25,6 +25,19 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return cv
     }()
     
+    let button:UIButton = {
+        let but = UIButton()
+        but.translatesAutoresizingMaskIntoConstraints = false
+        but.setTitleColor(.black, for: .normal)
+        but.setTitle("Go To next view that has slider in table view cell", for: .normal)
+        return but
+    }()
+    
+    @objc func buttonAction(){
+        let table = SliderInsideTableView(style: .plain)
+        self.navigationController?.pushViewController(table, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -33,6 +46,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         collectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         collectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
         collectionView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        view.addSubview(button)
+        
+        button.centerYAnchor.constraint(equalTo: view.centerYAnchor,constant:20).isActive = true
+        button.leftAnchor.constraint(equalTo: view.leftAnchor,constant:10).isActive = true
+        button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
